@@ -1,0 +1,95 @@
+* {
+    font-family : Anton;
+}
+
+body {
+    background-color : #F7F5F9;
+}
+
+#wrapper {
+    width: 800px;
+    height: 1000px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    position : relative;
+    
+}
+
+#logo > h1, #key-list {
+    margin : 0 auto;
+    text-align : center;
+    
+    list-style : none;
+    padding-left : 0;
+    
+}
+
+#logo > h1 {
+    /* border : 1px solid black;
+    border-radius : 20px; */
+}
+
+#logo {
+    width : 700px;
+    padding-top : 30px;
+    padding-bottom : 30px;
+}
+
+#key-list {
+    width : 700px;
+    height : 1000px;
+    overflow : auto;
+}
+
+/* Chrome, Safari, Edge */
+::-webkit-scrollbar {
+    display: none;
+}
+
+#key-list > li {
+    padding-top : 30px;
+    padding-bottom : 30px;
+    border-radius : 20px;
+    background-color : #FFFFFF;
+    margin-top : 20px;
+    margin-bottom : 20px;
+    margin-left : 15px;
+    margin-right : 15px;
+    box-shadow : 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+#key, #time {
+    display : inline-block;
+}
+
+#key {
+    width : 75px;
+    height : 50px;
+    border : 1px solid black;
+    margin-right : 20px;
+    
+}
+
+#key-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width : 100%;
+    height: 100%;
+    font-size : 18px;
+}
+
+#reset-button, #save-button {
+    margin-top : 30px;
+    margin-bottom : 30px;
+    margin-right : 10px;
+    margin-left : 10px;
+    width : 100px;
+    height : 60px;
+    
+}
