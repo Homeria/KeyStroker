@@ -98,7 +98,9 @@ function updateKeyList(key, time) {
       textToSave += logs[i].getInfo() + "\n";
     }
 
-    let filename = 'saved_log.txt';
+    let now = new Date();
+
+    let filename = 'saved_log ' + getDateString(now) + 'txt';
     download(filename, textToSave);
   }
 
@@ -110,6 +112,24 @@ function updateKeyList(key, time) {
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
+  }
+
+  function getDateString(now) {
+    let s = 
+    now.getFullYear() + "-"
+    + (now.getMonth() + 1) + "-"
+    + now.getDate() + " " ;
+    
+    const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    s += "(" + daysOfWeek[now.getDay()] + ") "
+
+    s += now.getHours() + "-"
+    + now.getMinutes() + "-"
+    + now.getSeconds() + "-"
+    + now.getMilliseconds();
+
+    return s;
+
   }
 
   // 키 입력 이벤트 리스너 등록
@@ -151,7 +171,6 @@ function updateKeyList(key, time) {
         || e.key === "F9"
         || e.key === "F10"
         || e.key === "F11"
-        || e.key === "F12"
         ) {
       e.preventDefault();
     }

@@ -70,7 +70,8 @@ body {
 #key {
     width : 75px;
     height : 50px;
-    border : 1px solid black;
+    border : 3px solid black;
+    border-radius : 10px;
     margin-right : 20px;
     
 }
